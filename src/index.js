@@ -42,5 +42,4 @@ function themeCustomization() {
       document.body.classList.add(Theme.DARK);
       checkbox.checked = true;
    }
-   // document.body.classList.add(Theme.LIGHT);
 }
