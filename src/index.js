@@ -13,7 +13,7 @@ const ulMenu = document.querySelector('.js-menu');
 const checkbox = document.querySelector('#theme-switch-toggle');
 
 themeCustomization(); // загрузка выбранной пользователем темы из localStorage
-console.log(checkbox);
+
 // создать разметку
 const markup = templateFunction(menu);
 
@@ -29,7 +29,7 @@ function onChangeCheckbox() {
       document.body.classList.remove(Theme.LIGHT);
       document.body.classList.add(Theme.DARK);
       localStorage.setItem('theme', Theme.DARK);
-   } else if (!checkbox.checked) {
+   } else {
       document.body.classList.remove(Theme.DARK);
       document.body.classList.add(Theme.LIGHT);
       localStorage.setItem('theme', Theme.LIGHT);
@@ -41,7 +41,6 @@ function themeCustomization() {
    if (localStorage.getItem('theme') === Theme.DARK) {
       document.body.classList.add(Theme.DARK);
       checkbox.checked = true;
-   } else if (localStorage.getItem('theme') === Theme.LIGHT) {
-      document.body.classList.add(Theme.LIGHT);
    }
+   // document.body.classList.add(Theme.LIGHT);
 }
